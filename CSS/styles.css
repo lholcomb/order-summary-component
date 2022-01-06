@@ -11,8 +11,6 @@
 p, 
 a   {
     font-family: 'Red Hat Display', sans-serif;
-    font-size: .8rem;
-    font-weight: 500;
 }
 
 p{
@@ -21,7 +19,7 @@ p{
 
 h2{
     font-family: 'Red Hat Display', sans-serif;
-    font-size: 1rem;
+    font-size: 1.75rem;
     font-weight: 900;
     text-align: center;
 }
@@ -38,7 +36,7 @@ h2{
 }
 
 .card{
-    width: 225px;
+    width: 450px;
     background-color: white;
     border-radius: 10px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -49,33 +47,34 @@ h2{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 110px;
+    height: 220px;
     border-radius: 10px 10px 0px 0px;
 }
 
 .order-summary{
-    padding: 1.3em;
-    height: 240px;
+    padding: 2.6em 3em;
+    height: 480px;
     text-align: center;
 }
 
+.order-summary p{
+    margin: 1em 0 1.1em 0; 
+}
+
 .order-summary p,
-.plan-details a,
-.order-summary a{
-    font-size: .6em;
+.plan-details a,{
+    font-size: 1em;
 }
 
 .order-summary a{
     text-decoration: none;
     color:var(--desaturated-blue);
+    font-size: .9rem;
+    font-weight: 700;
 }
 
 .order-summary a:hover{
     color:var(--dark-blue);
-}
-
-.order-summary h2{
-margin-bottom: .1em;
 }
 
 .plan-details{
@@ -84,13 +83,12 @@ margin-bottom: .1em;
     justify-content: space-between;
     background-color: #f8f9fe;
     border-radius: 5px;
-    margin: .6em 0 .6em 0;
-    padding: .8em;
+    padding: 1.5em;
 }
 
 .plan-details img{
-    height: 25px;
-    width: 25px;
+    height: 50px;
+    width: 50px;
 }
 
 .plan-details a{
@@ -115,7 +113,7 @@ margin-bottom: .1em;
 
 .price p{
     text-align: left;
-    margin-right: 2em;
+    margin: 0 3.5em 0 0;
 }
 
 .btn-main{
@@ -125,13 +123,47 @@ margin-bottom: .1em;
     border: none;
     border-radius: 5px;
     font-family: 'Red Hat Display', sans-serif;
-    font-size: .6rem;
-    padding: .5em 0em;
-    margin-bottom: 1em;
+    font-size: .9rem;
+    font-weight: 700;
+    padding: .8em 0em;
+    margin: 1.85em 0 2.5em 0;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .btn-main:hover{
-    background-color: var(--desaturated-blue);
+    background-color: hsl(245, 83%, 68%);
     cursor: pointer;
+}
+
+@media (max-width: 415px){
+    html {
+        font-size: 90%;
+      }
+}
+
+@media only screen and (max-width: 376px) {
+    .container {
+      background-image: url(images/pattern-background-desktop.svg);
+    }
+  }
+
+@media (max-width: 360px){
+html {
+    font-size: 85%;
+    }
+.plan-details{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.plan-details img{
+    margin-bottom: 1em;
+}
+.plan-details a{
+    margin-top: 1em;
+}
+.price p{
+    text-align: center;
+    margin: 0;
+}
 }
