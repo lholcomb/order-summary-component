@@ -29,8 +29,8 @@ h2{
 .container{
     height: 100vh;
     background-image: url(/images/pattern-background-desktop.svg);
-    background-position: top center;
     background-repeat: no-repeat;
+    background-size: 100%;
     background-color: var(--pale-blue);
     display: flex;
     justify-content: center;
@@ -38,9 +38,10 @@ h2{
 }
 
 .card{
-    width: 280px;
+    width: 225px;
     background-color: white;
     border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .card-header{
@@ -48,22 +49,33 @@ h2{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 140px;
+    height: 110px;
     border-radius: 10px 10px 0px 0px;
 }
 
 .order-summary{
-    padding: 1.75em 1.75em;
-    height: 295px;
+    padding: 1.3em;
+    height: 240px;
     text-align: center;
 }
 
-.order-summary p{
-    font-size: .7em;
+.order-summary p,
+.plan-details a,
+.order-summary a{
+    font-size: .6em;
+}
+
+.order-summary a{
+    text-decoration: none;
+    color:var(--desaturated-blue);
+}
+
+.order-summary a:hover{
+    color:var(--dark-blue);
 }
 
 .order-summary h2{
-margin-bottom: .6em;
+margin-bottom: .1em;
 }
 
 .plan-details{
@@ -72,13 +84,23 @@ margin-bottom: .6em;
     justify-content: space-between;
     background-color: #f8f9fe;
     border-radius: 5px;
-    margin: .8em 0 1.2em 0;
+    margin: .6em 0 .6em 0;
     padding: .8em;
 }
 
 .plan-details img{
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
+}
+
+.plan-details a{
+    color: var(--bright-blue);
+    text-decoration: underline;
+}
+
+.plan-details a:hover{
+    text-decoration: none;
+    color: var(--desaturated-blue);
 }
 
 .price{
@@ -93,8 +115,7 @@ margin-bottom: .6em;
 
 .price p{
     text-align: left;
-    margin-right: 4em;
-    margin-left: 1em;
+    margin-right: 2em;
 }
 
 .btn-main{
@@ -105,6 +126,12 @@ margin-bottom: .6em;
     border-radius: 5px;
     font-family: 'Red Hat Display', sans-serif;
     font-size: .6rem;
-    padding: .8em 0em;
-    margin-bottom: 2em;
+    padding: .5em 0em;
+    margin-bottom: 1em;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.btn-main:hover{
+    background-color: var(--desaturated-blue);
+    cursor: pointer;
 }
